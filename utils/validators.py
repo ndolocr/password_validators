@@ -4,7 +4,8 @@ class Validator:
     @staticmethod
     def long_enough(password):
         """Password must be atleast 8 characters long"""
-        check = len(password)> 8
+        check = len(password) >= 8
+
         if check:
             return check
         else:
