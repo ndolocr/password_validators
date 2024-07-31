@@ -1,3 +1,4 @@
+import string
 class Validator:
     
     "Function to check if password has more than 8 characters"
@@ -17,3 +18,12 @@ class Validator:
         if check:
             return check
         return Validator.short_enough.__doc__
+    
+    @staticmethod
+    def has_lowercase(password):
+        """Password must contain a lowercase letter"""
+        check = len(set(string.ascii_lowercase).intersection(password)) > 0
+        if check:
+            return check
+        else:
+            return Validator.has_lowercase.__doc__
