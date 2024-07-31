@@ -27,3 +27,12 @@ class Validator:
             return check
         else:
             return Validator.has_lowercase.__doc__
+        
+    @staticmethod
+    def has_uppercase(password):
+        """Password must contain an uppercase letter"""
+        check = len(set(string.ascii_uppercase).intersection(password)) > 0
+        if check:
+            return check
+        else:
+            return Validator.has_uppercase.__doc__

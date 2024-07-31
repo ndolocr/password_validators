@@ -4,6 +4,7 @@ password_validators = [
     Validator.long_enough,
     Validator.short_enough,
     Validator.has_lowercase,
+    Validator.has_uppercase,
 ]
 
 def validate_password(password):
