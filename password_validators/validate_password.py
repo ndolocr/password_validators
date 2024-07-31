@@ -5,8 +5,8 @@ password_validators = [
 ]
 
 def validate_password(password):
-    for validator in password_validators:
-        validated_psw = validator(password)
-        if isinstance(validator, str):
-            return validator
+    for test_fn in password_validators:
+        test = test_fn(password)
+        if isinstance(test, str):
+            return test
     return True

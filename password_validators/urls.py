@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from password_validators.views import ValidatePassword
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('validate/password', ValidatePassword.as_view(), name='validate_password')
 ]
