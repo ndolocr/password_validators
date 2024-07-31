@@ -1,6 +1,7 @@
 from utils.validators import Validator
 
 password_validators = [
+    Validator.has_special,
     Validator.has_numeric,
     Validator.long_enough,
     Validator.short_enough,

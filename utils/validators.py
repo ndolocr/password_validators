@@ -45,3 +45,12 @@ class Validator:
             return check
         else:
             return Validator.has_numeric.__doc__
+    
+    @staticmethod
+    def has_special(password):
+        """Password must contain a special character"""
+        check = len(set(string.punctuation).intersection(password)) > 0
+        if check:
+            return check
+        else:
+            return Validator.has_special.__doc__
