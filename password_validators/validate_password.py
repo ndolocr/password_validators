@@ -1,10 +1,11 @@
 from utils.validators import Validator
 
 password_validators = [
+    Validator.has_numeric,
     Validator.long_enough,
     Validator.short_enough,
     Validator.has_lowercase,
-    Validator.has_uppercase,
+    Validator.has_uppercase,    
 ]
 
 def validate_password(password):

@@ -36,3 +36,12 @@ class Validator:
             return check
         else:
             return Validator.has_uppercase.__doc__
+        
+    @staticmethod
+    def has_numeric(password):
+        """Password must contain a digit"""
+        check = len(set(string.digits).intersection(password)) > 0
+        if check:
+            return check
+        else:
+            return Validator.has_numeric.__doc__
