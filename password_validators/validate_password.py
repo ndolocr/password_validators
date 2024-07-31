@@ -3,6 +3,7 @@ from utils.validators import Validator
 password_validators = [
     Validator.long_enough,
     Validator.short_enough,
+    Validator.has_lowercase,
 ]
 
 def validate_password(password):
